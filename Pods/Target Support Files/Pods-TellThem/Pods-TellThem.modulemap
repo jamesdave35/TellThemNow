@@ -1,0 +1,6 @@
+framework module Pods_TellThem {
+  umbrella header "Pods-TellThem-umbrella.h"
+
+  export *
+  module * { export * }
+}

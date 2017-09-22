@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		533469001F3B51E300D54B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533468FF1F3B51E300D54B92 /* AppDelegate.swift */; };
-		533469021F3B51E300D54B92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533469011F3B51E300D54B92 /* ViewController.swift */; };
+		533469021F3B51E300D54B92 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533469011F3B51E300D54B92 /* SignInVC.swift */; };
 		533469051F3B51E300D54B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533469031F3B51E300D54B92 /* Main.storyboard */; };
 		533469071F3B51E300D54B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533469061F3B51E300D54B92 /* Assets.xcassets */; };
 		5334690A1F3B51E300D54B92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533469081F3B51E300D54B92 /* LaunchScreen.storyboard */; };
 		533469151F3B51E300D54B92 /* TellThemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533469141F3B51E300D54B92 /* TellThemUITests.swift */; };
+		533469221F3B570000D54B92 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 533469211F3B570000D54B92 /* Roboto-Black.ttf */; };
+		5350CBB51F3B69C200E48FDF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB41F3B69C200E48FDF /* SignUpVC.swift */; };
+		5350CBB71F3B6AE000E48FDF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */; };
+		5350CBB91F3B6C9600E48FDF /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB81F3B6C9600E48FDF /* AuthServices.swift */; };
+		5350CBBB1F3B6CB800E48FDF /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */; };
+		5350CBBD1F3B6CC700E48FDF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBBC1F3B6CC700E48FDF /* Users.swift */; };
+		5350CBBF1F3B70D200E48FDF /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBBE1F3B70D200E48FDF /* DismissKeyboard.swift */; };
+		5388881E1F53B74E00B68222 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5388881D1F53B74E00B68222 /* GoogleService-Info.plist */; };
+		539A1D621F55DA4400327B66 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A1D611F55DA4400327B66 /* TabBarVC.swift */; };
+		B5B98E290B1E5B5FD18A94F8 /* Pods_TellThem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DA5F50005B1DD53766D82F /* Pods_TellThem.framework */; };
+		FD9D551227310B5C352A8AFF /* Pods_TellThemUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCFBC883335834621661395 /* Pods_TellThemUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +39,7 @@
 /* Begin PBXFileReference section */
 		533468FC1F3B51E300D54B92 /* TellThem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TellThem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		533468FF1F3B51E300D54B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		533469011F3B51E300D54B92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		533469011F3B51E300D54B92 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		533469041F3B51E300D54B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		533469061F3B51E300D54B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		533469091F3B51E300D54B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +47,21 @@
 		533469101F3B51E300D54B92 /* TellThemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TellThemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		533469141F3B51E300D54B92 /* TellThemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellThemUITests.swift; sourceTree = "<group>"; };
 		533469161F3B51E300D54B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		533469211F3B570000D54B92 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../Downloads/roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		5350CBB41F3B69C200E48FDF /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		5350CBB81F3B6C9600E48FDF /* AuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
+		5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
+		5350CBBC1F3B6CC700E48FDF /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		5350CBBE1F3B70D200E48FDF /* DismissKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
+		5388881D1F53B74E00B68222 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		539A1D611F55DA4400327B66 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		5DCFBC883335834621661395 /* Pods_TellThemUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TellThemUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A295D001B9869CE48319424 /* Pods-TellThemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TellThemUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TellThemUITests/Pods-TellThemUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A60F8BBCA418FA4DB60DA12F /* Pods-TellThemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TellThemUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TellThemUITests/Pods-TellThemUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B4D91CD9B4CC15A3DD8FF49E /* Pods-TellThem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TellThem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TellThem/Pods-TellThem.debug.xcconfig"; sourceTree = "<group>"; };
+		B6D278D80AD2F5F7414431FB /* Pods-TellThem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TellThem.release.xcconfig"; path = "Pods/Target Support Files/Pods-TellThem/Pods-TellThem.release.xcconfig"; sourceTree = "<group>"; };
+		C8DA5F50005B1DD53766D82F /* Pods_TellThem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TellThem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B98E290B1E5B5FD18A94F8 /* Pods_TellThem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +77,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9D551227310B5C352A8AFF /* Pods_TellThemUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F4217226E514802BD529E1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4D91CD9B4CC15A3DD8FF49E /* Pods-TellThem.debug.xcconfig */,
+				B6D278D80AD2F5F7414431FB /* Pods-TellThem.release.xcconfig */,
+				8A295D001B9869CE48319424 /* Pods-TellThemUITests.debug.xcconfig */,
+				A60F8BBCA418FA4DB60DA12F /* Pods-TellThemUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		533468F31F3B51E300D54B92 = {
 			isa = PBXGroup;
 			children = (
 				533468FE1F3B51E300D54B92 /* TellThem */,
 				533469131F3B51E300D54B92 /* TellThemUITests */,
 				533468FD1F3B51E300D54B92 /* Products */,
+				3F4217226E514802BD529E1D /* Pods */,
+				CB21E3FA42C78393671ED974 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +118,16 @@
 		533468FE1F3B51E300D54B92 /* TellThem */ = {
 			isa = PBXGroup;
 			children = (
+				5350CBB01F3B694F00E48FDF /* Model */,
+				5350CBB11F3B695A00E48FDF /* View */,
+				5350CBB21F3B696200E48FDF /* Controller */,
+				5350CBB31F3B696900E48FDF /* Networkservices */,
 				533468FF1F3B51E300D54B92 /* AppDelegate.swift */,
-				533469011F3B51E300D54B92 /* ViewController.swift */,
 				533469031F3B51E300D54B92 /* Main.storyboard */,
 				533469061F3B51E300D54B92 /* Assets.xcassets */,
 				533469081F3B51E300D54B92 /* LaunchScreen.storyboard */,
+				5388881D1F53B74E00B68222 /* GoogleService-Info.plist */,
+				533469211F3B570000D54B92 /* Roboto-Black.ttf */,
 				5334690B1F3B51E300D54B92 /* Info.plist */,
 			);
 			path = TellThem;
@@ -96,6 +142,51 @@
 			path = TellThemUITests;
 			sourceTree = "<group>";
 		};
+		5350CBB01F3B694F00E48FDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5350CBBC1F3B6CC700E48FDF /* Users.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5350CBB11F3B695A00E48FDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5350CBB21F3B696200E48FDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				533469011F3B51E300D54B92 /* SignInVC.swift */,
+				5350CBB41F3B69C200E48FDF /* SignUpVC.swift */,
+				5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */,
+				5350CBBE1F3B70D200E48FDF /* DismissKeyboard.swift */,
+				539A1D611F55DA4400327B66 /* TabBarVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5350CBB31F3B696900E48FDF /* Networkservices */ = {
+			isa = PBXGroup;
+			children = (
+				5350CBB81F3B6C9600E48FDF /* AuthServices.swift */,
+				5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */,
+			);
+			name = Networkservices;
+			sourceTree = "<group>";
+		};
+		CB21E3FA42C78393671ED974 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8DA5F50005B1DD53766D82F /* Pods_TellThem.framework */,
+				5DCFBC883335834621661395 /* Pods_TellThemUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 533469191F3B51E300D54B92 /* Build configuration list for PBXNativeTarget "TellThem" */;
 			buildPhases = (
+				F930C62E22E1D4F676506AE4 /* [CP] Check Pods Manifest.lock */,
 				533468F81F3B51E300D54B92 /* Sources */,
 				533468F91F3B51E300D54B92 /* Frameworks */,
 				533468FA1F3B51E300D54B92 /* Resources */,
+				9AC86E6B15341B0326838D22 /* [CP] Embed Pods Frameworks */,
+				56A8D14BBDF69BE262EBDA53 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5334691C1F3B51E300D54B92 /* Build configuration list for PBXNativeTarget "TellThemUITests" */;
 			buildPhases = (
+				E2D9B376775C99B24D3EE26E /* [CP] Check Pods Manifest.lock */,
 				5334690C1F3B51E300D54B92 /* Sources */,
 				5334690D1F3B51E300D54B92 /* Frameworks */,
 				5334690E1F3B51E300D54B92 /* Resources */,
+				8CA0A1ACC32CFF17ABA72DD4 /* [CP] Embed Pods Frameworks */,
+				2A25AD25B73EE76106B1CE3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,6 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5334690A1F3B51E300D54B92 /* LaunchScreen.storyboard in Resources */,
+				533469221F3B570000D54B92 /* Roboto-Black.ttf in Resources */,
+				5388881E1F53B74E00B68222 /* GoogleService-Info.plist in Resources */,
 				533469071F3B51E300D54B92 /* Assets.xcassets in Resources */,
 				533469051F3B51E300D54B92 /* Main.storyboard in Resources */,
 			);
@@ -196,13 +295,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A25AD25B73EE76106B1CE3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TellThemUITests/Pods-TellThemUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56A8D14BBDF69BE262EBDA53 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TellThem/Pods-TellThem-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CA0A1ACC32CFF17ABA72DD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TellThemUITests/Pods-TellThemUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC86E6B15341B0326838D22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TellThem/Pods-TellThem-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TellThem/Pods-TellThem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D9B376775C99B24D3EE26E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TellThemUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F930C62E22E1D4F676506AE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TellThem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		533468F81F3B51E300D54B92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533469021F3B51E300D54B92 /* ViewController.swift in Sources */,
+				5350CBB91F3B6C9600E48FDF /* AuthServices.swift in Sources */,
+				533469021F3B51E300D54B92 /* SignInVC.swift in Sources */,
+				5350CBB51F3B69C200E48FDF /* SignUpVC.swift in Sources */,
 				533469001F3B51E300D54B92 /* AppDelegate.swift in Sources */,
+				539A1D621F55DA4400327B66 /* TabBarVC.swift in Sources */,
+				5350CBBB1F3B6CB800E48FDF /* DatabaseServices.swift in Sources */,
+				5350CBBF1F3B70D200E48FDF /* DismissKeyboard.swift in Sources */,
+				5350CBB71F3B6AE000E48FDF /* WelcomeVC.swift in Sources */,
+				5350CBBD1F3B6CC700E48FDF /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +565,7 @@
 		};
 		5334691A1F3B51E300D54B92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D91CD9B4CC15A3DD8FF49E /* Pods-TellThem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z383SB92Z7;
@@ -354,6 +579,7 @@
 		};
 		5334691B1F3B51E300D54B92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D278D80AD2F5F7414431FB /* Pods-TellThem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z383SB92Z7;
@@ -367,6 +593,7 @@
 		};
 		5334691D1F3B51E300D54B92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A295D001B9869CE48319424 /* Pods-TellThemUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Z383SB92Z7;
@@ -381,6 +608,7 @@
 		};
 		5334691E1F3B51E300D54B92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A60F8BBCA418FA4DB60DA12F /* Pods-TellThemUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Z383SB92Z7;
@@ -412,6 +640,7 @@
 				5334691B1F3B51E300D54B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5334691C1F3B51E300D54B92 /* Build configuration list for PBXNativeTarget "TellThemUITests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +649,7 @@
 				5334691E1F3B51E300D54B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
