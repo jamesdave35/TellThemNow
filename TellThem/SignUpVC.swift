@@ -129,9 +129,10 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                             
                             self.databaseService.saveUserInDatabase(user: userToSave)
                             self.performSegue(withIdentifier: "Tabbar", sender: nil)
-                            self.databaseService.fetchUserProfile(completion: { (success, username) in
+                            self.databaseService.fetchUserProfile(completion: { (success, username, url) in
                                 if success {
                                    // self.welcomeVC?.welcomeLabel.text =  "Welcome \(username)"
+                                    
                                 }
                             })
                         }
@@ -176,9 +177,10 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                 let userToSave = Users(fullName: name!, firstName: name!, lastName: name!, email: email!, userID: uid, profileUrl: profileUrl!)
                 self.databaseService.saveUserInDatabase(user: userToSave)
                 self.performSegue(withIdentifier: "Tabbar", sender: nil)
-                self.databaseService.fetchUserProfile(completion: { (success, username) in
+                self.databaseService.fetchUserProfile(completion: { (success, username, url) in
                     if success {
                        // self.welcomeVC?.welcomeLabel.text = "Welcome \(username)"
+                        
                     }
                 })
                 

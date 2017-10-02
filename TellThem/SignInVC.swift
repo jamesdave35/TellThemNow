@@ -34,7 +34,7 @@ class SignInVC: UIViewController {
                 if success {
                     print("user successfully signed in")
                     self.performSegue(withIdentifier: "TabbarVC", sender: nil)
-                    self.dataService.fetchUserProfile(completion: { (success, username) in
+                    self.dataService.fetchUserProfile(completion: { (success, username, url) in
                         if success {
                            // self.welcomeVC?.welcomeLabel.text = "Welcome \(username)"
                         }
@@ -57,9 +57,10 @@ class SignInVC: UIViewController {
                         print(error?.localizedDescription)
                     } else {
                         self.performSegue(withIdentifier: "TabbarVC", sender: nil)
-                        self.dataService.fetchUserProfile(completion: { (success, username) in
+                        self.dataService.fetchUserProfile(completion: { (success, username, url) in
                             if success {
                                // self.welcomeVC?.welcomeLabel.text = "Welcome \(username)"
+                                
                             }
                         })
                         

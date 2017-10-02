@@ -8,28 +8,24 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class WelcomeVC: UIViewController {
 
   //  @IBOutlet weak var welcomeLabel: UILabel!
+    
     var databaseService = DatabaseServices()
-    let profileImage = UIImageView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         showSignInVC()
-        profileImage.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        profileImage.clipsToBounds = true
-        profileImage.layer.cornerRadius = 30
-        profileImage.contentMode = .scaleAspectFill
-        
-        profileImage.image = UIImage(named: "default")
-        
-        let barButton = UIBarButtonItem(image: profileImage.image, style: .done, target: self, action: #selector(self.showProfile))
-        navigationItem.leftBarButtonItem = barButton
-       
+      
         
     }
+    
+    
     
     func showProfile(){
         
@@ -42,16 +38,28 @@ class WelcomeVC: UIViewController {
             self.present(signIn, animated: true, completion: nil)
             
         } else {
-            databaseService.fetchUserProfile { (success, username) in
+            databaseService.fetchUserProfile { (success, username, url) in
                 if success {
-                    //self.welcomeLabel.text = "Welcome \(username)"
+                    
+                    
+                    
+                
                 }
                 
             }
         }
     }
 
-  
+    @IBAction func addButtonPressed(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func menuButtonPressed(_ sender: Any) {
+        
+        
+    }
+    
 //    @IBAction func logOutPressed(_ sender: Any) {
 //        do {
 //            try Auth.auth().signOut()

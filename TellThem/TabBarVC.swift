@@ -26,7 +26,7 @@ class TabBarVC: UITabBarController {
             self.present(signIn, animated: true, completion: nil)
             
         } else {
-            databaseService.fetchUserProfile { (success, username) in
+            databaseService.fetchUserProfile { (success, username, url) in
                 if success {
                     //self.welcomeLabel.text = "Welcome \(username)"
                 }

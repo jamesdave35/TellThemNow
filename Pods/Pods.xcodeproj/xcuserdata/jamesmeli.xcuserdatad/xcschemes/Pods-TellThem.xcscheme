@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9E6FD792C5BE260AB61A1D8DCAA29A8D"
+               BlueprintIdentifier = "449E6CE964F8BD07550C48FF4457850D"
                BuildableName = "Pods_TellThem.framework"
                BlueprintName = "Pods-TellThem"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9E6FD792C5BE260AB61A1D8DCAA29A8D"
+            BlueprintIdentifier = "449E6CE964F8BD07550C48FF4457850D"
             BuildableName = "Pods_TellThem.framework"
             BlueprintName = "Pods-TellThem"
             ReferencedContainer = "container:Pods.xcodeproj">

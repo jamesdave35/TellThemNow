@@ -22,7 +22,7 @@ class DatabaseServices {
         userRef?.setValue(user.toAnyObject())
     }
     
-    func fetchUserProfile(completion: @escaping(_ success: Bool, _ profileName: String) -> Void){
+    func fetchUserProfile(completion: @escaping(_ success: Bool, _ profileName: String, _ profileUrl: String) -> Void){
         
         let uid = Auth.auth().currentUser?.uid
         let userRef = Database.database().reference().child("users").child(uid!)
@@ -34,8 +34,9 @@ class DatabaseServices {
             
             let dict = snapshot.value as! [String: AnyObject]
             let username = dict["firstName"] as! String
+            let url = dict["profileUrl"] as! String
             
-            completion(true, username)
+            completion(true, username, url)
         })
     }
 }
