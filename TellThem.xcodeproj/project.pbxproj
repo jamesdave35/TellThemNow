@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53022DA21F840390003DBDD0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53022DA11F840390003DBDD0 /* LoginVC.swift */; };
 		533469001F3B51E300D54B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533468FF1F3B51E300D54B92 /* AppDelegate.swift */; };
-		533469021F3B51E300D54B92 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533469011F3B51E300D54B92 /* SignInVC.swift */; };
 		533469051F3B51E300D54B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533469031F3B51E300D54B92 /* Main.storyboard */; };
 		533469071F3B51E300D54B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533469061F3B51E300D54B92 /* Assets.xcassets */; };
 		5334690A1F3B51E300D54B92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533469081F3B51E300D54B92 /* LaunchScreen.storyboard */; };
 		533469151F3B51E300D54B92 /* TellThemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533469141F3B51E300D54B92 /* TellThemUITests.swift */; };
 		533469221F3B570000D54B92 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 533469211F3B570000D54B92 /* Roboto-Black.ttf */; };
-		5350CBB51F3B69C200E48FDF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB41F3B69C200E48FDF /* SignUpVC.swift */; };
+		5334C1AC1F840F8B00F1F5A0 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */; };
+		5334C1AE1F840FBD00F1F5A0 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */; };
 		5350CBB71F3B6AE000E48FDF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */; };
 		5350CBB91F3B6C9600E48FDF /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB81F3B6C9600E48FDF /* AuthServices.swift */; };
 		5350CBBB1F3B6CB800E48FDF /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */; };
@@ -40,9 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53022DA11F840390003DBDD0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		533468FC1F3B51E300D54B92 /* TellThem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TellThem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		533468FF1F3B51E300D54B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		533469011F3B51E300D54B92 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		533469041F3B51E300D54B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		533469061F3B51E300D54B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		533469091F3B51E300D54B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,7 +52,8 @@
 		533469141F3B51E300D54B92 /* TellThemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellThemUITests.swift; sourceTree = "<group>"; };
 		533469161F3B51E300D54B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		533469211F3B570000D54B92 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../Downloads/roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
-		5350CBB41F3B69C200E48FDF /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		5350CBB81F3B6C9600E48FDF /* AuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
@@ -166,14 +168,15 @@
 		5350CBB21F3B696200E48FDF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				533469011F3B51E300D54B92 /* SignInVC.swift */,
-				5350CBB41F3B69C200E48FDF /* SignUpVC.swift */,
 				5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */,
 				5350CBBE1F3B70D200E48FDF /* DismissKeyboard.swift */,
 				539A1D611F55DA4400327B66 /* TabBarVC.swift */,
 				537FFA281F830CF80074A436 /* GetStartedVC.swift */,
 				537FFA2A1F8339660074A436 /* CreateAccountVC.swift */,
 				53889F081F83463700938D53 /* SetProfileImageVC.swift */,
+				53022DA11F840390003DBDD0 /* LoginVC.swift */,
+				5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */,
+				5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -379,6 +383,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,15 +434,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5334C1AC1F840F8B00F1F5A0 /* ContainerVC.swift in Sources */,
 				5350CBB91F3B6C9600E48FDF /* AuthServices.swift in Sources */,
-				533469021F3B51E300D54B92 /* SignInVC.swift in Sources */,
 				537FFA2B1F8339670074A436 /* CreateAccountVC.swift in Sources */,
-				5350CBB51F3B69C200E48FDF /* SignUpVC.swift in Sources */,
 				533469001F3B51E300D54B92 /* AppDelegate.swift in Sources */,
 				539A1D621F55DA4400327B66 /* TabBarVC.swift in Sources */,
 				537FFA291F830CF80074A436 /* GetStartedVC.swift in Sources */,
 				53889F091F83463700938D53 /* SetProfileImageVC.swift in Sources */,
+				5334C1AE1F840FBD00F1F5A0 /* SideMenuVC.swift in Sources */,
 				5350CBBB1F3B6CB800E48FDF /* DatabaseServices.swift in Sources */,
+				53022DA21F840390003DBDD0 /* LoginVC.swift in Sources */,
 				5350CBBF1F3B70D200E48FDF /* DismissKeyboard.swift in Sources */,
 				5350CBB71F3B6AE000E48FDF /* WelcomeVC.swift in Sources */,
 				5350CBBD1F3B6CC700E48FDF /* Users.swift in Sources */,

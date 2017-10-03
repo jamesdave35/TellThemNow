@@ -29,10 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
         let urlPath = url.path as! String
-        let signUpVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignIn") as! SignInVC
+        let getStartedVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GetStarted") as! GetStartedVC
         
         if urlPath == "/welcome" {
-            self.window?.rootViewController = signUpVc
+            self.window?.rootViewController = getStartedVc
             
             return true
         }

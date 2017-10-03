@@ -15,7 +15,7 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var hideView: UIView!
-    var firstname: String?
+    var firstName: String?
     var lastName: String?
     var email: String?
     var password: String?
@@ -26,6 +26,7 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("\(email!), \(password!)")
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.showPickerController))
         profileImage.isUserInteractionEnabled = true
         
@@ -109,41 +110,31 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
     }
 
     @IBAction func continuePressed(_ sender: Any) {
+        
         if profileImage.image != UIImage(named: "camera") {
-           authService.createUser(email: email!, password: password!, completion: { (success, user) in
-             if success {
-                let uid = user.uid
-                let fullName = "\(self.firstName!) \(self.lastName!)"
-                
-                let storageRef = Storage.storage().reference().child("profile_image").child("\(uid).jpeg")
-                
-                let data = UIImageJPEGRepresentation(self.profileImage.image!, 0.3)
-                storageRef.putData(data!, metadata: nil, completion: { (metadata, error) in
-                    if error != nil {
-                        print(error?.localizedDescription)
-                    } else {
-                        let profileUrl = metadata?.downloadURL()?.absoluteString
-                        let userToSave = Users(fullName: fullName, firstName: self.firstName!, lastName: self.lastName!, email: self.email!, userID: uid, profileUrl: profileUrl!)
-                        
-                        
-                        
-                        self.databaseService.saveUserInDatabase(user: userToSave)
-                        self.performSegue(withIdentifier: "Tab2", sender: nil)
-                        self.databaseService.fetchUserProfile(completion: { (success, username, url) in
-                            if success {
-                                // self.welcomeVC?.welcomeLabel.text =  "Welcome \(username)"
-                                
-                            }
-                        })
-                    }
-                })
-                
-                
-                
-                print("Successfully created user and saved in database")
-            }
-        })
+            authService.createUser(email: email!, password: password!, completion: { (success, user) in
+                if success {
+                    let uid = user.uid
+                    let fullName = "\(self.firstName!) \(self.lastName!)"
+                    
+                    let storageRef = Storage.storage().reference().child("profile_image").child("\(uid).jpeg")
+                    let data = UIImageJPEGRepresentation(self.profileImage.image!, 0.3)
+                    storageRef.putData(data!, metadata: nil, completion: { (metadata, error) in
+                        if error != nil {
+                            print(error?.localizedDescription)
+                        } else {
+                            let profileUrl = metadata?.downloadURL()?.absoluteString
+                            let userToSave = Users(fullName: fullName , firstName: self.firstName!, lastName: self.lastName!, email: self.email!, userID: uid, profileUrl: profileUrl!)
+                            self.databaseService.saveUserInDatabase(user: userToSave)
+                            self.performSegue(withIdentifier: "Tab2", sender: nil)
+                        }
+                    })
+                }
+            })
+        } else {
+            print("Sorry you need to select a photo")
         }
+
     
 }
 

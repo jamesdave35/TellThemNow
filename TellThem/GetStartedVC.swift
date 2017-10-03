@@ -31,7 +31,7 @@ class GetStartedVC: UIViewController {
         
         if updateCounter <= 2 {
             pageControl.currentPage = updateCounter
-            print(imageArray[updateCounter])
+            
             backgroundImage.image = UIImage(named: imageArray[updateCounter])
             explanationLabel.text = labelArray[updateCounter]
             
@@ -42,6 +42,7 @@ class GetStartedVC: UIViewController {
     }
 
     @IBAction func signInPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "Login", sender: nil)
     }
     @IBAction func signUpPressed(_ sender: Any) {
         

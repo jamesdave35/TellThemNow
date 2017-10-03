@@ -22,7 +22,7 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        hideKeyboardWhenTappedAround()
     }
     
     func signUpWithFacebook(completion: @escaping (_ success: Bool, _ user: User) -> Void) {
@@ -78,7 +78,7 @@ class CreateAccountVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SetProfile" {
             let setProfileVC = segue.destination as! SetProfileImageVC
-            setProfileVC.firstname = self.firstNameTextField.text!
+            setProfileVC.firstName = self.firstNameTextField.text!
             setProfileVC.lastName = self.lastNameTextField.text!
             setProfileVC.email = self.emailTextField.text!
             setProfileVC.password = self.passwordTextField.text!

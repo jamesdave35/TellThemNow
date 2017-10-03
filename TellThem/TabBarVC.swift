@@ -21,9 +21,9 @@ class TabBarVC: UITabBarController {
     func showSignInVC(){
         
         if Auth.auth().currentUser == nil {
-            let signIn = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignIn") as! SignInVC
-            signIn.modalTransitionStyle = .crossDissolve
-            self.present(signIn, animated: true, completion: nil)
+            let getStartedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GetStarted") as! GetStartedVC
+            getStartedVC.modalTransitionStyle = .crossDissolve
+            self.present(getStartedVC, animated: true, completion: nil)
             
         } else {
             databaseService.fetchUserProfile { (success, username, url) in
