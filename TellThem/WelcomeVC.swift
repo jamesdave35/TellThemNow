@@ -38,9 +38,7 @@ class WelcomeVC: UIViewController {
             getStartedVC.modalTransitionStyle = .crossDissolve
             self.present(getStartedVC, animated: true, completion: nil)
             
-        } else {
-            self.navigationItem.title = "Welcome"
-        }
+        } 
     }
     
     @objc func showProfile(){
