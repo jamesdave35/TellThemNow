@@ -172,17 +172,10 @@
 		5350CBB21F3B696200E48FDF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */,
-				5350CBBE1F3B70D200E48FDF /* DismissKeyboard.swift */,
-				539A1D611F55DA4400327B66 /* TabBarVC.swift */,
-				537FFA281F830CF80074A436 /* GetStartedVC.swift */,
-				537FFA2A1F8339660074A436 /* CreateAccountVC.swift */,
-				53889F081F83463700938D53 /* SetProfileImageVC.swift */,
-				53022DA11F840390003DBDD0 /* LoginVC.swift */,
-				5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */,
-				5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */,
-				5334C1AF1F8462F300F1F5A0 /* ProfileVC.swift */,
-				5334C1B11F84631900F1F5A0 /* SettingsVC.swift */,
+				53C916331F8547F500D6D26D /* ProfileAndSettings */,
+				53C916321F8547BF00D6D26D /* MainControllers */,
+				53C916311F85479300D6D26D /* Authentication */,
+				53C916341F85481400D6D26D /* Other */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -194,6 +187,45 @@
 				5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */,
 			);
 			name = Networkservices;
+			sourceTree = "<group>";
+		};
+		53C916311F85479300D6D26D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				53889F081F83463700938D53 /* SetProfileImageVC.swift */,
+				537FFA2A1F8339660074A436 /* CreateAccountVC.swift */,
+				53022DA11F840390003DBDD0 /* LoginVC.swift */,
+				537FFA281F830CF80074A436 /* GetStartedVC.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		53C916321F8547BF00D6D26D /* MainControllers */ = {
+			isa = PBXGroup;
+			children = (
+				539A1D611F55DA4400327B66 /* TabBarVC.swift */,
+				5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */,
+			);
+			name = MainControllers;
+			sourceTree = "<group>";
+		};
+		53C916331F8547F500D6D26D /* ProfileAndSettings */ = {
+			isa = PBXGroup;
+			children = (
+				5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */,
+				5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */,
+				5334C1B11F84631900F1F5A0 /* SettingsVC.swift */,
+				5334C1AF1F8462F300F1F5A0 /* ProfileVC.swift */,
+			);
+			name = ProfileAndSettings;
+			sourceTree = "<group>";
+		};
+		53C916341F85481400D6D26D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5350CBBE1F3B70D200E48FDF /* DismissKeyboard.swift */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		CB21E3FA42C78393671ED974 /* Frameworks */ = {

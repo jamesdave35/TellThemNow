@@ -17,14 +17,20 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailTextField: AnimatableTextField!
     let dataService = DatabaseServices()
     let authservice = AuthServices()
+    
+    @IBOutlet weak var loginButton: AnimatableButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        activityIndicator.isHidden = true
         
     }
 
     @IBAction func logInPressed(_ sender: Any) {
-        
+        loginButton.setTitle("", for: UIControlState.normal)
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
         if let email = emailTextField.text , let password = passwordTextField.text {
             authservice.signInUser(email: email, password: password, completion: { (success) in
                 if success {
@@ -35,6 +41,10 @@ class LoginVC: UIViewController {
                             // self.welcomeVC?.welcomeLabel.text = "Welcome \(username)"
                         }
                     })
+                } else if !success{
+                    self.loginButton.setTitle("Log in", for: UIControlState.normal)
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
                 }
             })
         }

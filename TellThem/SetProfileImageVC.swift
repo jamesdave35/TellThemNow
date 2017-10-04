@@ -8,8 +8,10 @@
 
 import UIKit
 import Firebase
+import IBAnimatable
 
 class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var continueButton: AnimatableButton!
     
     @IBOutlet weak var heigthConstraint: NSLayoutConstraint!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
@@ -22,18 +24,25 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
     
     let authService = AuthServices()
     let databaseService = DatabaseServices()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("\(email!), \(password!)")
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.showPickerController))
         profileImage.isUserInteractionEnabled = true
         
         profileImage.addGestureRecognizer(tapGesture)
+        continueButton.fillColor = UIColor.gray
+        continueButton.isEnabled = false
+        
+        
 
         hideView.layer.cornerRadius = 80
     }
+    
+    
     
     func showPickerController() {
         
@@ -60,13 +69,31 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
             
         }
         
+        let removePhotoAction = UIAlertAction(title: "Remove photo", style: .destructive) { (action) in
+            self.profileImage.image = UIImage(named: "camera")
+            self.continueButton.fillColor = UIColor.gray
+            self.continueButton.isEnabled = false
+            self.hideView.isHidden = false
+            self.widthConstraint.constant = 80
+            self.heigthConstraint.constant = 80
+            self.profileImage.layer.cornerRadius = 0
+        }
+        
         let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "dismiss"), style: .destructive, handler: nil)
         
         //Add the actions to the alert view controller
-        alertController.addAction(cameraAction)
-        alertController.addAction(photosLibraryAction)
-        alertController.addAction(savedPhotosAction)
-        alertController.addAction(cancelAction)
+        if self.profileImage.image != UIImage(named: "camera") {
+            alertController.addAction(cameraAction)
+            alertController.addAction(photosLibraryAction)
+            alertController.addAction(savedPhotosAction)
+            alertController.addAction(removePhotoAction)
+            alertController.addAction(cancelAction)
+        } else {
+            alertController.addAction(cameraAction)
+            alertController.addAction(photosLibraryAction)
+            alertController.addAction(savedPhotosAction)
+            alertController.addAction(cancelAction)
+        }
         
         //Present the alert view from the navigation rightBarButtom item on iPad
         alertController.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
@@ -101,6 +128,8 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
         profileImage.clipsToBounds = true
         profileImage.layer.cornerRadius = 75
         hideView.isHidden = true
+        continueButton.isEnabled = true
+        continueButton.fillColor = UIColor(hexString: "F22C5A")
         
         
         
@@ -140,6 +169,18 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
 
 
     @IBAction func skipPressed(_ sender: Any) {
+        authService.createUser(email: email!, password: password!, completion: { (success, user) in
+            if success {
+                let uid = user.uid
+                let fullName = "\(self.firstName!) \(self.lastName!)"
+                let userToSave = Users(fullName: fullName , firstName: self.firstName!, lastName: self.lastName!, email: self.email!, userID: uid, profileUrl: "")
+                self.databaseService.saveUserInDatabase(user: userToSave)
+                self.performSegue(withIdentifier: "Tab2", sender: nil)
+                
+                
+            }
+        
+    })
     }
     
     @IBAction func backPressed(_ sender: Any) {

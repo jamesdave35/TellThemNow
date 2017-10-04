@@ -27,7 +27,8 @@ class AuthServices {
     func signInUser(email: String, password: String, completion: @escaping (_ success: Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print("\(error!.localizedDescription)")
+                completion(false)
             } else {
                 completion(true)
             }

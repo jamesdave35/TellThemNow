@@ -140,6 +140,9 @@
                                     <action selector="backPressed:" destination="8Ff-yb-EKK" eventType="touchUpInside" id="DhU-PC-bws"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Dt-Im-YFm">
+                                <rect key="frame" x="142" y="324" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -148,8 +151,10 @@
                             <constraint firstItem="c1a-qv-w98" firstAttribute="top" secondItem="HEp-YO-jll" secondAttribute="bottom" constant="130" id="7LD-T0-8uB"/>
                             <constraint firstItem="WMf-f8-oYF" firstAttribute="top" secondItem="kbr-qT-6we" secondAttribute="bottom" constant="30" id="Hes-5Y-QkY"/>
                             <constraint firstItem="kbr-qT-6we" firstAttribute="leading" secondItem="JQ2-yz-cm0" secondAttribute="leadingMargin" constant="15" id="IO5-rT-fa4"/>
+                            <constraint firstItem="8Dt-Im-YFm" firstAttribute="centerX" secondItem="kbr-qT-6we" secondAttribute="centerX" id="J2H-aT-GMH"/>
                             <constraint firstItem="5n7-GZ-ZOw" firstAttribute="leading" secondItem="JQ2-yz-cm0" secondAttribute="leadingMargin" constant="10" id="JOa-V9-NuN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kbr-qT-6we" secondAttribute="trailing" constant="15" id="LS6-P0-v6x"/>
+                            <constraint firstItem="8Dt-Im-YFm" firstAttribute="centerY" secondItem="kbr-qT-6we" secondAttribute="centerY" id="PH3-Jh-LtZ"/>
                             <constraint firstItem="c1a-qv-w98" firstAttribute="leading" secondItem="JQ2-yz-cm0" secondAttribute="leadingMargin" constant="15" id="Suk-F5-8ak"/>
                             <constraint firstItem="5n7-GZ-ZOw" firstAttribute="top" secondItem="HEp-YO-jll" secondAttribute="bottom" constant="10" id="V3c-5u-E98"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WMf-f8-oYF" secondAttribute="trailing" constant="15" id="aY1-CP-jFQ"/>
@@ -157,7 +162,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="8Dt-Im-YFm" id="xj9-fg-pGE"/>
                         <outlet property="emailTextField" destination="9OK-t9-xv0" id="f5U-yb-Kdh"/>
+                        <outlet property="loginButton" destination="kbr-qT-6we" id="Iqc-Gs-Keu"/>
                         <outlet property="passwordTextField" destination="gy8-2k-nfy" id="QzI-Ba-qnr"/>
                         <segue destination="EwT-vR-RGN" kind="show" identifier="Tab3" id="Max-wO-RhO"/>
                     </connections>
@@ -374,6 +381,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="vWY-R6-phm" id="fKF-us-r92"/>
                         <outlet property="heigthConstraint" destination="60q-ra-tjL" id="JYO-fE-jJX"/>
                         <outlet property="hideView" destination="bXL-Wx-LsC" id="3qP-o2-21z"/>
                         <outlet property="profileImage" destination="cTd-el-oOU" id="zVW-0i-16k"/>
@@ -927,6 +935,6 @@
         <image name="user" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Max-wO-RhO"/>
+        <segue reference="ALp-Eu-Vmm"/>
     </inferredMetricsTieBreakers>
 </document>
