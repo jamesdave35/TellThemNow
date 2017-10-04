@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ContainerVC: UIViewController {
 
@@ -15,18 +16,27 @@ class ContainerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.toogleSideMenu), name: NSNotification.Name("ToogleSideMenu"), object: nil)
         
     }
 
    @objc func toogleSideMenu() {
         if sideMenuVisible {
-            slideConstraint.constant = -240
+            slideConstraint.constant = -290
             sideMenuVisible = false
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
         } else {
             slideConstraint.constant = 0
             sideMenuVisible = true
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
         }
     }
-
+    
 }
+
+

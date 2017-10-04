@@ -16,22 +16,20 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       showSignInVC()
+
     }
-    func showSignInVC(){
+    
+    override func viewDidAppear(_ animated: Bool) {
         
+        showSignInVC()
+    }
+    
+    func showSignInVC(){
         if Auth.auth().currentUser == nil {
             let getStartedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GetStarted") as! GetStartedVC
             getStartedVC.modalTransitionStyle = .crossDissolve
             self.present(getStartedVC, animated: true, completion: nil)
             
-        } else {
-            databaseService.fetchUserProfile { (success, username, url) in
-                if success {
-                    //self.welcomeLabel.text = "Welcome \(username)"
-                }
-                
-            }
         }
     }
   

@@ -19,63 +19,64 @@ class WelcomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        showSignInVC()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.logOut), name: NSNotification.Name("LogOut"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showProfile), name: NSNotification.Name("Profile"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showSettings), name: NSNotification.Name("Settings"), object: nil)
       
         
     }
     
-    
-    
-    func showProfile(){
+    override func viewDidAppear(_ animated: Bool) {
         
+        showSignInVC()
     }
+    
     func showSignInVC(){
-        
         if Auth.auth().currentUser == nil {
             let getStartedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GetStarted") as! GetStartedVC
             getStartedVC.modalTransitionStyle = .crossDissolve
             self.present(getStartedVC, animated: true, completion: nil)
             
         } else {
-            databaseService.fetchUserProfile { (success, username, url) in
-                if success {
-                    
-                    self.navigationItem.title = "Welcome \(username)"
-                    
-                    
-                
-                }
-                
-            }
+            self.navigationItem.title = "Welcome"
         }
     }
+    
+    @objc func showProfile(){
+        self.performSegue(withIdentifier: "Profile", sender: nil)
+    }
+    
+    @objc func showSettings(){
+        self.performSegue(withIdentifier: "Settings", sender: nil)
+    }
+    @objc func logOut() {
+        do {
+            try Auth.auth().signOut()
+            
+        } catch let logoutError {
+            print(logoutError)
+            
+        }
+        let getStartedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GetStarted") as! GetStartedVC
+        getStartedVC.modalTransitionStyle = .crossDissolve
+        self.present(getStartedVC, animated: true, completion: nil)
+    }
+  
 
     @IBAction func addButtonPressed(_ sender: Any) {
+       
         
     }
     
     
     @IBAction func menuButtonPressed(_ sender: Any) {
         
-        print("Running....")
-        
         NotificationCenter.default.post(name: NSNotification.Name("ToogleSideMenu"), object: nil)
         
         
     }
     
-//    @IBAction func logOutPressed(_ sender: Any) {
-//        do {
-//            try Auth.auth().signOut()
-//            
-//        } catch let logoutError {
-//            print(logoutError)
-//            
-//        }
-//        let signIn = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignIn") as! SignInVC
-//        signIn.modalTransitionStyle = .crossDissolve
-//        self.present(signIn, animated: true, completion: nil)
-//    }
+
 
 }

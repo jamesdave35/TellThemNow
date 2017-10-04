@@ -24,19 +24,20 @@ class DatabaseServices {
     
     func fetchUserProfile(completion: @escaping(_ success: Bool, _ profileName: String, _ profileUrl: String) -> Void){
         
-        let uid = Auth.auth().currentUser?.uid
-        let userRef = Database.database().reference().child("users").child(uid!)
+        if let uid = Auth.auth().currentUser?.uid {
+         let userRef = Database.database().reference().child("users").child(uid)
         
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+          userRef.observeSingleEvent(of: .value, with: { (snapshot) in
             
             
             
             
             let dict = snapshot.value as! [String: AnyObject]
-            let username = dict["firstName"] as! String
+            let username = dict["fullName"] as! String
             let url = dict["profileUrl"] as! String
             
             completion(true, username, url)
         })
+    }
     }
 }

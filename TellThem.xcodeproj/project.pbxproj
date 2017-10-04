@@ -16,6 +16,8 @@
 		533469221F3B570000D54B92 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 533469211F3B570000D54B92 /* Roboto-Black.ttf */; };
 		5334C1AC1F840F8B00F1F5A0 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */; };
 		5334C1AE1F840FBD00F1F5A0 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */; };
+		5334C1B01F8462F300F1F5A0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334C1AF1F8462F300F1F5A0 /* ProfileVC.swift */; };
+		5334C1B21F84631900F1F5A0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334C1B11F84631900F1F5A0 /* SettingsVC.swift */; };
 		5350CBB71F3B6AE000E48FDF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */; };
 		5350CBB91F3B6C9600E48FDF /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBB81F3B6C9600E48FDF /* AuthServices.swift */; };
 		5350CBBB1F3B6CB800E48FDF /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */; };
@@ -54,6 +56,8 @@
 		533469211F3B570000D54B92 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../Downloads/roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		5334C1AF1F8462F300F1F5A0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		5334C1B11F84631900F1F5A0 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		5350CBB61F3B6AE000E48FDF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		5350CBB81F3B6C9600E48FDF /* AuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		5350CBBA1F3B6CB800E48FDF /* DatabaseServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				53022DA11F840390003DBDD0 /* LoginVC.swift */,
 				5334C1AB1F840F8B00F1F5A0 /* ContainerVC.swift */,
 				5334C1AD1F840FBD00F1F5A0 /* SideMenuVC.swift */,
+				5334C1AF1F8462F300F1F5A0 /* ProfileVC.swift */,
+				5334C1B11F84631900F1F5A0 /* SettingsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			files = (
 				5334C1AC1F840F8B00F1F5A0 /* ContainerVC.swift in Sources */,
 				5350CBB91F3B6C9600E48FDF /* AuthServices.swift in Sources */,
+				5334C1B01F8462F300F1F5A0 /* ProfileVC.swift in Sources */,
 				537FFA2B1F8339670074A436 /* CreateAccountVC.swift in Sources */,
 				533469001F3B51E300D54B92 /* AppDelegate.swift in Sources */,
 				539A1D621F55DA4400327B66 /* TabBarVC.swift in Sources */,
@@ -447,6 +454,7 @@
 				5350CBBF1F3B70D200E48FDF /* DismissKeyboard.swift in Sources */,
 				5350CBB71F3B6AE000E48FDF /* WelcomeVC.swift in Sources */,
 				5350CBBD1F3B6CC700E48FDF /* Users.swift in Sources */,
+				5334C1B21F84631900F1F5A0 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
