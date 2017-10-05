@@ -144,29 +144,29 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         if profileImage.image != UIImage(named: "camera") {
-            authService.createUser(email: email!, password: password!, completion: { (success, user) in
-                if success {
-                    let uid = user!.uid
-                    let fullName = "\(self.firstName!) \(self.lastName!)"
+            
+            let uid = Auth.auth().currentUser?.uid
+            let fullName = "\(self.firstName!) \(self.lastName!)"
                     
-                    let storageRef = Storage.storage().reference().child("profile_image").child("\(uid).jpeg")
-                    let data = UIImageJPEGRepresentation(self.profileImage.image!, 0.3)
-                    storageRef.putData(data!, metadata: nil, completion: { (metadata, error) in
-                        if error != nil {
-                            print(error?.localizedDescription)
-                        } else {
-                            let profileUrl = metadata?.downloadURL()?.absoluteString
-                            let userToSave = Users(fullName: fullName , firstName: self.firstName!, lastName: self.lastName!, email: self.email!, userID: uid, profileUrl: profileUrl!)
-                            self.databaseService.saveUserInDatabase(user: userToSave)
-                            self.performSegue(withIdentifier: "Tab2", sender: nil)
-                        }
-                    })
-                } else if !success {
-                    self.continueButton.setTitle("SAVE", for: UIControlState.normal)
-                    self.activityIndicator.isHidden = true
-                    self.activityIndicator.stopAnimating()
-                }
-            })
+            let storageRef = Storage.storage().reference().child("profile_image").child("\(uid).jpeg")
+            let data = UIImageJPEGRepresentation(self.profileImage.image!, 0.3)
+            storageRef.putData(data!, metadata: nil, completion: { (metadata, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+                self.continueButton.setTitle("SAVE", for: UIControlState.normal)
+                self.activityIndicator.isHidden = true
+                self.activityIndicator.stopAnimating()
+            } else {
+                let profileUrl = metadata?.downloadURL()?.absoluteString
+                let userToSave = Users(fullName: fullName , firstName: self.firstName!, lastName:self.lastName!, email: self.email!, userID: uid!, profileUrl: profileUrl!)
+                self.databaseService.saveUserInDatabase(user: userToSave)
+                self.performSegue(withIdentifier: "Tab2", sender: nil)
+            }
+                    
+            
+                    
+        })
+            
         } else {
             print("Sorry you need to select a photo")
         }
@@ -176,18 +176,12 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
 
 
     @IBAction func skipPressed(_ sender: Any) {
-        authService.createUser(email: email!, password: password!, completion: { (success, user) in
-            if success {
-                let uid = user!.uid
-                let fullName = "\(self.firstName!) \(self.lastName!)"
-                let userToSave = Users(fullName: fullName , firstName: self.firstName!, lastName: self.lastName!, email: self.email!, userID: uid, profileUrl: "")
-                self.databaseService.saveUserInDatabase(user: userToSave)
-                self.performSegue(withIdentifier: "Tab2", sender: nil)
-                
-                
-            }
+        let uid = Auth.auth().currentUser?.uid
+        let fullName = "\(self.firstName!) \(self.lastName!)"
+        let userToSave = Users(fullName: fullName , firstName: self.firstName!, lastName: self.lastName!, email: self.email!, userID: uid!, profileUrl: "")
+        self.databaseService.saveUserInDatabase(user: userToSave)
+        self.performSegue(withIdentifier: "Tab2", sender: nil)
         
-    })
     }
     
     @IBAction func backPressed(_ sender: Any) {

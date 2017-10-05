@@ -10,6 +10,7 @@ import UIKit
 import IBAnimatable
 import FBSDKLoginKit
 import Firebase
+import CFAlertViewController
 
 class CreateAccountVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var joinNowButton: AnimatableButton!
@@ -20,6 +21,7 @@ class CreateAccountVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstNameTextField: AnimatableTextField!
     let authService = AuthServices()
     let databaseService = DatabaseServices()
+    let color = UIColor(hexString: "F2105A")
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -115,7 +117,19 @@ class CreateAccountVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func joinNowPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "SetProfile", sender: nil)
+        authService.createUser(email: emailTextField.text!, password: passwordTextField.text!) { (success, user, error) in
+            if success {
+                self.performSegue(withIdentifier: "SetProfile", sender: nil)
+            } else if !success {
+                let alertView: CFAlertViewController = CFAlertViewController(title: "Sorry", titleColor: UIColor(hexString: "F52757"), message: error?.localizedDescription, messageColor: UIColor.black, textAlignment: .center, preferredStyle: .alert, headerView: nil, footerView: nil, didDismissAlertHandler: nil)
+                let action: CFAlertAction = CFAlertAction(title: "Dismiss", style: .Default, alignment: .justified, backgroundColor: self.color, textColor: UIColor.white, handler: nil)
+                
+                alertView.addAction(action)
+                self.present(alertView, animated: true, completion: nil)
+            }
+            
+        }
+        
     }
     
     @IBAction func backPressed(_ sender: Any) {

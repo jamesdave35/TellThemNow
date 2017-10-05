@@ -14,14 +14,14 @@ import CFAlertViewController
 
 class AuthServices {
     
-    func createUser(email: String, password: String, completion: @escaping (_ success: Bool, _ user: User?) -> Void) {
+    func createUser(email: String, password: String, completion: @escaping (_ success: Bool, _ user: User?, _ error: Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error != nil {
                 print(error!.localizedDescription)
-                completion(false, nil)
+                completion(false, nil, error)
                 
             } else {
-                completion(true, user!)
+                completion(true, user!, nil)
             }
         }
     }
