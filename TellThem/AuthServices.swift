@@ -9,14 +9,17 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import CFAlertViewController
 
 
 class AuthServices {
     
-    func createUser(email: String, password: String, completion: @escaping (_ success: Bool, _ user: User) -> Void) {
+    func createUser(email: String, password: String, completion: @escaping (_ success: Bool, _ user: User?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error!.localizedDescription)
+                completion(false, nil)
+                
             } else {
                 completion(true, user!)
             }
@@ -24,13 +27,14 @@ class AuthServices {
     }
     
     
-    func signInUser(email: String, password: String, completion: @escaping (_ success: Bool) -> Void) {
+    func signInUser(email: String, password: String, completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error != nil {
                 print("\(error!.localizedDescription)")
-                completion(false)
+                
+                completion(false, error!)
             } else {
-                completion(true)
+                completion(true, nil)
             }
         }
         

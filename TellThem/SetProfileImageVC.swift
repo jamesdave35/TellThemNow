@@ -13,6 +13,7 @@ import IBAnimatable
 class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var continueButton: AnimatableButton!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var heigthConstraint: NSLayoutConstraint!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileImage: UIImageView!
@@ -37,7 +38,7 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
         continueButton.fillColor = UIColor.gray
         continueButton.isEnabled = false
         
-        
+        activityIndicator.isHidden = true
 
         hideView.layer.cornerRadius = 80
     }
@@ -139,11 +140,13 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
     }
 
     @IBAction func continuePressed(_ sender: Any) {
-        
+        continueButton.setTitle("", for: UIControlState.normal)
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
         if profileImage.image != UIImage(named: "camera") {
             authService.createUser(email: email!, password: password!, completion: { (success, user) in
                 if success {
-                    let uid = user.uid
+                    let uid = user!.uid
                     let fullName = "\(self.firstName!) \(self.lastName!)"
                     
                     let storageRef = Storage.storage().reference().child("profile_image").child("\(uid).jpeg")
@@ -158,6 +161,10 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
                             self.performSegue(withIdentifier: "Tab2", sender: nil)
                         }
                     })
+                } else if !success {
+                    self.continueButton.setTitle("SAVE", for: UIControlState.normal)
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
                 }
             })
         } else {
@@ -171,7 +178,7 @@ class SetProfileImageVC: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBAction func skipPressed(_ sender: Any) {
         authService.createUser(email: email!, password: password!, completion: { (success, user) in
             if success {
-                let uid = user.uid
+                let uid = user!.uid
                 let fullName = "\(self.firstName!) \(self.lastName!)"
                 let userToSave = Users(fullName: fullName , firstName: self.firstName!, lastName: self.lastName!, email: self.email!, userID: uid, profileUrl: "")
                 self.databaseService.saveUserInDatabase(user: userToSave)

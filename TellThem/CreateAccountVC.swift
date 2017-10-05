@@ -11,8 +11,9 @@ import IBAnimatable
 import FBSDKLoginKit
 import Firebase
 
-class CreateAccountVC: UIViewController {
-
+class CreateAccountVC: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var joinNowButton: AnimatableButton!
+    
     @IBOutlet weak var passwordTextField: AnimatableTextField!
     @IBOutlet weak var emailTextField: AnimatableTextField!
     @IBOutlet weak var lastNameTextField: AnimatableTextField!
@@ -23,6 +24,52 @@ class CreateAccountVC: UIViewController {
         super.viewDidLoad()
 
         hideKeyboardWhenTappedAround()
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        joinNowButton.fillColor = UIColor.lightGray
+        joinNowButton.isEnabled = false
+        handleTextFields()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    func handleTextFields(){
+        
+        firstNameTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        lastNameTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        emailTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        
+    }
+    
+    @objc func textFieldDidChange() {
+        let firstName = firstNameTextField.text!
+        let lastName = firstNameTextField.text!
+        let password = passwordTextField.text!
+        let email = emailTextField.text!
+        
+        if firstName == ""  {
+            joinNowButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+            joinNowButton.backgroundColor = UIColor.lightGray
+        } else if lastName == "" {
+            joinNowButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+            joinNowButton.backgroundColor = UIColor.lightGray
+        } else if email == "" {
+            joinNowButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+            joinNowButton.backgroundColor = UIColor.lightGray
+        } else if password.characters.count < 6 {
+            joinNowButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+            joinNowButton.backgroundColor = UIColor.lightGray
+        }
+        else {
+            joinNowButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+            joinNowButton.backgroundColor = UIColor(hexString: "F22C5A")
+            joinNowButton.isEnabled = true
+        }
     }
     
     func signUpWithFacebook(completion: @escaping (_ success: Bool, _ user: User) -> Void) {

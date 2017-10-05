@@ -16,6 +16,7 @@ target 'TellThem' do
    pod 'FBSDKShareKit'
    pod 'FBSDKLoginKit'
    pod 'SDWebImage', '~>3.8'
+   pod 'CFAlertViewController'
 
   target 'TellThemUITests' do
     inherit! :search_paths

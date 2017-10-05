@@ -12,6 +12,7 @@
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
             <string>Avenir-Medium</string>
         </array>
         <array key="Roboto-Black.ttf">
@@ -93,8 +94,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eLO-hU-yhX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
-                                <state key="normal" title="Log in">
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -114,8 +115,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="A3K-cP-EbC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
-                                <state key="normal" title="Log in wih Facebook">
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="LOG IN WITH FACEBOOK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -123,7 +124,7 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.28627450980392155" green="0.41176470588235292" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.2196078431372549" green="0.30588235294117649" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -143,6 +144,16 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Dt-Im-YFm">
                                 <rect key="frame" x="142" y="324" width="37" height="37"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtV-Rh-tpM">
+                                <rect key="frame" x="87.5" y="269" width="145" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Forgot password ?">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordPressed:" destination="8Ff-yb-EKK" eventType="touchUpInside" id="epI-vm-976"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -154,10 +165,12 @@
                             <constraint firstItem="8Dt-Im-YFm" firstAttribute="centerX" secondItem="kbr-qT-6we" secondAttribute="centerX" id="J2H-aT-GMH"/>
                             <constraint firstItem="5n7-GZ-ZOw" firstAttribute="leading" secondItem="JQ2-yz-cm0" secondAttribute="leadingMargin" constant="10" id="JOa-V9-NuN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kbr-qT-6we" secondAttribute="trailing" constant="15" id="LS6-P0-v6x"/>
+                            <constraint firstItem="rtV-Rh-tpM" firstAttribute="top" secondItem="c1a-qv-w98" secondAttribute="bottom" constant="13" id="NkU-Eg-lKo"/>
                             <constraint firstItem="8Dt-Im-YFm" firstAttribute="centerY" secondItem="kbr-qT-6we" secondAttribute="centerY" id="PH3-Jh-LtZ"/>
                             <constraint firstItem="c1a-qv-w98" firstAttribute="leading" secondItem="JQ2-yz-cm0" secondAttribute="leadingMargin" constant="15" id="Suk-F5-8ak"/>
                             <constraint firstItem="5n7-GZ-ZOw" firstAttribute="top" secondItem="HEp-YO-jll" secondAttribute="bottom" constant="10" id="V3c-5u-E98"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WMf-f8-oYF" secondAttribute="trailing" constant="15" id="aY1-CP-jFQ"/>
+                            <constraint firstItem="rtV-Rh-tpM" firstAttribute="centerX" secondItem="JQ2-yz-cm0" secondAttribute="centerX" id="dx6-0m-P6a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c1a-qv-w98" secondAttribute="trailing" constant="15" id="lwV-U4-W12"/>
                         </constraints>
                     </view>
@@ -221,7 +234,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fUR-BD-uMN"/>
                                 </constraints>
-                                <state key="normal" title="Sign up">
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -345,8 +359,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="muA-Ky-I9y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
-                                <state key="normal" title="Continue">
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="SAVE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -362,6 +376,9 @@
                                     <action selector="skipPressed:" destination="hU1-gL-QuI" eventType="touchUpInside" id="jQk-KK-fLy"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Des-dJ-hLX">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -372,8 +389,10 @@
                             <constraint firstItem="vWY-R6-phm" firstAttribute="top" secondItem="LGp-qr-Nbt" secondAttribute="bottom" constant="55" id="IO0-iT-0tT"/>
                             <constraint firstItem="cTd-el-oOU" firstAttribute="centerY" secondItem="bXL-Wx-LsC" secondAttribute="centerY" id="LjX-5T-tyM"/>
                             <constraint firstItem="vWY-R6-phm" firstAttribute="leading" secondItem="tOe-Sx-Yik" secondAttribute="leadingMargin" constant="20" id="SQo-Xk-8iI"/>
+                            <constraint firstItem="Des-dJ-hLX" firstAttribute="centerY" secondItem="vWY-R6-phm" secondAttribute="centerY" id="TkP-Mh-DTv"/>
                             <constraint firstItem="bXL-Wx-LsC" firstAttribute="centerX" secondItem="tOe-Sx-Yik" secondAttribute="centerX" id="Zmo-Y8-1sP"/>
                             <constraint firstItem="bXL-Wx-LsC" firstAttribute="top" secondItem="Ffm-R2-181" secondAttribute="bottom" constant="60" id="aT9-so-57t"/>
+                            <constraint firstItem="Des-dJ-hLX" firstAttribute="centerX" secondItem="vWY-R6-phm" secondAttribute="centerX" id="fNx-gm-VxU"/>
                             <constraint firstItem="LGp-qr-Nbt" firstAttribute="centerX" secondItem="tOe-Sx-Yik" secondAttribute="centerX" id="gmA-10-bvY"/>
                             <constraint firstItem="cTd-el-oOU" firstAttribute="centerX" secondItem="bXL-Wx-LsC" secondAttribute="centerX" id="m6U-50-BoM"/>
                             <constraint firstItem="Uh6-mr-KsT" firstAttribute="top" secondItem="LGp-qr-Nbt" secondAttribute="bottom" constant="140" id="ofI-fe-uPi"/>
@@ -381,6 +400,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Des-dJ-hLX" id="h3R-hS-135"/>
                         <outlet property="continueButton" destination="vWY-R6-phm" id="fKF-us-r92"/>
                         <outlet property="heigthConstraint" destination="60q-ra-tjL" id="JYO-fE-jJX"/>
                         <outlet property="hideView" destination="bXL-Wx-LsC" id="3qP-o2-21z"/>
@@ -515,12 +535,12 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSY-b7-2JA" customClass="AnimatableButton" customModule="IBAnimatable">
-                                <rect key="frame" x="31" y="398" width="258" height="45"/>
+                                <rect key="frame" x="31" y="398" width="258" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="jn4-Fc-UcD"/>
+                                    <constraint firstAttribute="height" constant="48" id="jn4-Fc-UcD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Join now">
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="JOIN NOW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -536,12 +556,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRp-jJ-8yE" customClass="AnimatableButton" customModule="IBAnimatable">
-                                <rect key="frame" x="31" y="465" width="258" height="45"/>
+                                <rect key="frame" x="31" y="468" width="258" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="o44-vI-2jL"/>
+                                    <constraint firstAttribute="height" constant="48" id="o44-vI-2jL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Join with Facebook">
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="JOIN WITH FACEBOOK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -549,7 +569,7 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.28627450980392155" green="0.41176470588235292" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.2196078431372549" green="0.30588235294117649" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -585,6 +605,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="R6U-dk-vH4" id="8Po-md-QqH"/>
                         <outlet property="firstNameTextField" destination="wi5-aq-eb7" id="7Kd-x9-l3a"/>
+                        <outlet property="joinNowButton" destination="BSY-b7-2JA" id="uEQ-SE-ZUh"/>
                         <outlet property="lastNameTextField" destination="xw7-2f-yN4" id="z0e-v0-23i"/>
                         <outlet property="passwordTextField" destination="uWB-kB-iFl" id="Yve-WO-Y04"/>
                         <segue destination="EwT-vR-RGN" kind="show" identifier="Tab" id="TLO-fO-OT2"/>
@@ -935,6 +956,6 @@
         <image name="user" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ALp-Eu-Vmm"/>
+        <segue reference="Max-wO-RhO"/>
     </inferredMetricsTieBreakers>
 </document>
